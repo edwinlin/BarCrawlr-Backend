@@ -17,14 +17,13 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    session.delete :user_id
   end
 
 # Private helper methods
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.permit(:username, :password, :img_url)
   end
 
   def set_user!
