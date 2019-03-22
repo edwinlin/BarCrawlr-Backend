@@ -1,0 +1,32 @@
+class UsersController < ApplicationController
+  before_action :set_user!, only: [:update, :destroy]
+
+  def index
+    @users = User.all
+    render json: @users
+  end
+
+  def create
+    @user = User.create(user_params)
+    render json: @user
+  end
+
+  def update
+    @user.update(user_params)
+  end
+
+  def destroy
+    @user.destroy
+  end
+
+# Private helper methods
+  private
+
+  def user_params
+    params.permit(:username, :password, :img_url)
+  end
+
+  def set_user!
+    @user = User.find(params[:id])
+  end
+end

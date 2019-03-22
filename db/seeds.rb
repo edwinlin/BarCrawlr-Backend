@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: "Bob", password_digest: "Ross", img_url: "https://kid101.com/wp-content/uploads/2018/04/Bob-Ross-Wine-and-Painting-Event-for-Young-Adults.jpg")
