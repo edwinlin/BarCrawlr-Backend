@@ -6,6 +6,7 @@ class Api::V1::RolesController < ApplicationController
   end
 
   def create
+    # byebug
     @role = Role.create(role_params)
     render json: @role
   end
@@ -22,6 +23,6 @@ class Api::V1::RolesController < ApplicationController
   private
 
   def role_params
-    params.require(:org_id).permit(:title, :rank, :Role_id)
+    params.require(:role).permit(:organization_id, :title, :rank, :user_id)
   end
 end

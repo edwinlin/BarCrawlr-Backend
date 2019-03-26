@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_03_22_111816) do
     t.string "title"
     t.integer "rank"
     t.integer "user_id"
-    t.integer "org_id"
+    t.integer "organization_id"
   end
 
   create_table "tasks", force: :cascade do |t|
