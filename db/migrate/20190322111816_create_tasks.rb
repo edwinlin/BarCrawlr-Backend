@@ -7,8 +7,8 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.string :description
 
       t.integer :user_id
-      t.integer :project_id
-      
+      t.integer :org_id
+
     end
   end
 end
