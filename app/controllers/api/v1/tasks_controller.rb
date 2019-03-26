@@ -22,7 +22,7 @@ class Api::V1::TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:project_id).permit(:name, :description, :user_id)
+    params.require(:org_id).permit(:name, :description, :user_id)
   end
 
 end
