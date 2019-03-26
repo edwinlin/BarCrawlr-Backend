@@ -8,6 +8,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
 
       t.integer :user_id
       t.integer :project_id
+      
     end
   end
 end
