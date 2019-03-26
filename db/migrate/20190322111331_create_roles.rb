@@ -5,9 +5,9 @@ class CreateRoles < ActiveRecord::Migration[5.2]
       t.timestamps
       t.string :title
       t.integer :rank
- 
+
       t.integer :user_id
-      t.integer :org_id
+      t.integer :organization_id
 
     end
   end
