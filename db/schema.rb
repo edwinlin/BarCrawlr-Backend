@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_03_22_111816) do
     t.string "username"
     t.string "password_digest"
     t.string "img_url"
+    t.string "lists"
   end
 
 end
