@@ -20,9 +20,10 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  # def update
-  #   @user.update(user_params)
-  # end
+  def update
+    @user.update(user_params)
+    render json: @user
+  end
   #
   # def destroy
   #   @user.destroy
@@ -32,7 +33,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :img_url)
+    params.require(:user).permit(:username, :password, :img_url, :lists)
   end
 
   def set_user!
